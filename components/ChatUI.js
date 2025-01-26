@@ -43,7 +43,7 @@ function ChatUI() {
 
   return (
       <Paper>
-        <Stack style={{ maxWidth: 600, margin: 'auto', height: '60vh'}}>
+        <Stack style={{ width: '90%', margin: 'auto', height: '60vh'}}>
           <ScrollArea style={{ flexGrow: 1 }} viewportRef={scrollAreaRef}>
             <Stack spacing="sm">
               {messages.map((message, index) => (
