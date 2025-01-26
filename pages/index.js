@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 import { person } from '../public/me';
 import { getSortedProjectsData } from '../lib/projects';
 import '@mantine/core/styles.css';
-import ChatUI from '../components/chatui';
+import ChatUI from '../components/Chatui';
 
 export async function getStaticProps() {
   const allProjectsData = getSortedProjectsData();
