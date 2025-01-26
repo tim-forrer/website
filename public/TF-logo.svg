@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100"
+   height="100"
+   viewBox="0 0 26.458333 26.458333"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="swatch7">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop7" />
+    </linearGradient>
+  </defs>
+  <g
+     id="layer1"
+     style="display:inline"
+     transform="translate(-1.7665698,-1.0692396)">
+    <path
+       style="opacity:1;fill:none;fill-opacity:0.990148;stroke:#000000;stroke-width:0.793115;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 7.9724576,1.4698008 2.1742279,5.0311566 m 0,0 -0.020052,7.9418464"
+       id="path28" />
+    <path
+       style="display:inline;fill:none;fill-opacity:0.990148;stroke:#000000;stroke-width:0.793115;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 22.022375,27.123756 5.79823,-3.561356 m 0,0 0.02005,-7.941846"
+       id="path28-1" />
+    <path
+       style="display:inline;fill:none;fill-opacity:0.990148;stroke:#000000;stroke-width:0.950104;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 18.446221,8.1261642 11.545251,20.452921"
+       id="path28-6" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.6389px;font-family:Sono;-inkscape-font-specification:'Sono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;opacity:1;fill:none;fill-opacity:0.990148;stroke:#000000;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       x="3.5721846"
+       y="16.28376"
+       id="text33"><tspan
+         id="tspan33"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.6389px;font-family:Sono;-inkscape-font-specification:'Sono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.529167;stroke-dasharray:none"
+         x="3.5721846"
+         y="16.28376">T</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.6389px;font-family:Sono;-inkscape-font-specification:'Sono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;display:inline;fill:none;fill-opacity:0.990148;stroke:#000000;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       x="15.857153"
+       y="23.230955"
+       id="text33-7"><tspan
+         id="tspan33-2"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.6389px;font-family:Sono;-inkscape-font-specification:'Sono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:none;stroke-width:0.529167;stroke-dasharray:none"
+         x="15.857153"
+         y="23.230955">F</tspan></text>
+  </g>
+</svg>
