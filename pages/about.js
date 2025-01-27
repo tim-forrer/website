@@ -4,19 +4,22 @@ import Date from "../components/Date";
 import { theme } from "../styles/theme";
 import { person } from "../public/me";
 import PageMotion from "../components/PageMotion";
+import { iconLibrary } from "../public/icons";
+import { createElement } from "react";
 
 const events = [
   {
-    name: "???",
+    name: "TBD",
     get key() {
       return `${this.name}`.replace(/\s/g, "");
     },
     title: "",
     dateStart: "",
     dateEnd: "",
-    country: "jp",
+    country: "",
     content: "Actively looking for next opportunity - please reach out if you're hiring!",
     lineVariant: "dashed",
+    icon: "question",
   },
   {
     name: "University of Tokyo",
@@ -26,8 +29,9 @@ const events = [
     title: "PhD",
     dateStart: "2022-10-01",
     dateEnd: "2026-03-31",
-    country: "jp",
-    content: "Doctoral student researching functional quantum computing.",
+    country: "JAPAN",
+    content: "Researching functional quantum computing as a doctoral student.",
+    icon: "university"
   },
   {
     name: "University of Tokyo",
@@ -37,8 +41,9 @@ const events = [
     title: "Research Student",
     dateStart: "2021-10-01",
     dateEnd: "2022-09-30",
-    country: "jp",
-    content: "Research student researching distributed quantum computing.",
+    country: "JAPAN",
+    content: "Explored distributed quantum computing as a research student.",
+    icon: "distributed"
   },
   {
     name: "Durham University",
@@ -48,8 +53,9 @@ const events = [
     title: "MSci (First Class Hons.)",
     dateStart: "2017-10-01",
     dateEnd: "2021-07-31",
-    country: "uk",
-    content: "Studied maths and physics under the Natural Sciences programme."
+    country: "UK",
+    content: "Studied maths and physics under the Natural Sciences programme.",
+    icon: "math"
   },
   {
     name: "Reading Blue Coat School",
@@ -59,8 +65,9 @@ const events = [
     title: "Student",
     dateStart: "2010-09-01",
     dateEnd: "2017-08-31",
-    country: "uk",
-    content: ""
+    country: "UK",
+    content: "",
+    icon: "school",
   },
 ]
 
@@ -69,8 +76,18 @@ export default function About() {
     return (
       <Timeline.Item
         key={event.key}
-        title={event.name}
+        title={
+          <>
+            <Title order={5} component="span">
+              {event.name}
+            </Title>
+            <Text size="xs" component="span" ml="xs">
+              {event.country}
+            </Text>
+          </>
+        }
         lineVariant={event.lineVariant}
+        bullet={iconLibrary[event.icon] ? createElement(iconLibrary[event.icon], { size: 16 }) : null}
       >
         <Text size="xs">
           { event.dateStart ? <><Date dateString={event.dateStart} /> - </> : event.dateStart }

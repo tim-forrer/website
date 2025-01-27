@@ -27,9 +27,12 @@ import {
   PiGridFourDuotone,
   PiBookBookmarkDuotone,
   PiImageDuotone,
+  PiGraphLight,
 } from "react-icons/pi";
-
-import { FaGithub, FaLinkedin, FaKaggle} from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaKaggle, FaQuestion } from "react-icons/fa6";
+import { IoSchool } from "react-icons/io5";
+import { GiSchoolBag } from "react-icons/gi";
+import { TbMathFunction } from "react-icons/tb";
 
 export const iconLibrary = {
   chevronUp: HiChevronUp,
@@ -60,4 +63,9 @@ export const iconLibrary = {
   clipboard: HiClipboard,
   arrowUpRightFromSquare: HiArrowTopRightOnSquare,
   kaggle: FaKaggle,
+  question: FaQuestion,
+  school: GiSchoolBag,
+  university: IoSchool,
+  math: TbMathFunction,
+  distributed: PiGraphLight,
 };
