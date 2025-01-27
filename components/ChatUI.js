@@ -6,7 +6,6 @@ import { theme } from '../styles/theme'
 function ChatUI() {
   const initialMessage = "I'm LL-tiM, an LLM that can answer any questions you might have about Tim!"
   const botThinking = "Thinking..."
-  // Get the value of a CSS variable
   const userColor = theme.colors.blue[3];
   const botColor = theme.colors.gray[1];
   const [messages, setMessages] = useState([{text: initialMessage, sender: 'bot'}]); // Stores chat messages
@@ -26,7 +25,7 @@ function ChatUI() {
       // Bot thinking time
       setTimeout(() => {
         setMessages((prev) => [...prev, { text: botThinking, sender: 'bot' }]);
-      }, 300); // Delay this message so it seems more normal
+      }, 500); // Delay this message so it seems more normal
       // Bot response
       const botResponse = await apiCall(userInput);
       setMessages((prev) => [...prev.slice(0, - 1), { text: botResponse, sender: 'bot' }]);
