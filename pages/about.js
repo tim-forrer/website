@@ -1,6 +1,6 @@
 import { Timeline, Title, Stack, Text, Avatar } from "@mantine/core";
 import SkewMark from "../components/SkewMark";
-import Date from "../components/date";
+import Date from "../components/Date";
 import { theme } from "../styles/theme";
 import { person } from "../public/me";
 import PageMotion from "../components/PageMotion";
