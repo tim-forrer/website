@@ -1,4 +1,4 @@
-import { Timeline, Title, Stack, Text, Avatar } from "@mantine/core";
+import { Timeline, Title, Stack, Text, Avatar, Group, Center } from "@mantine/core";
 import SkewMark from "../components/SkewMark";
 import Date from "../components/Date";
 import { theme } from "../styles/theme";
@@ -83,8 +83,10 @@ export default function About() {
   return (
     <PageMotion>
       <Stack>
-        <Title order={2} display='inline'>About <Avatar src={person.avatar}/></Title>
-          {person.bio}
+          <Center>
+            <Avatar src={person.avatar} size='xl'/>
+          </Center>
+          <Text>{person.bio}</Text>
         <Title order={2}><SkewMark>Tim</SkewMark>eline</Title>
         <Timeline active={3} lineWidth={3} reverseActive color={theme.colors.blue[3]}>
           {timelineItems}
