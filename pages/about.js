@@ -31,7 +31,8 @@ const events = [
     dateEnd: "2026-03-31",
     country: "JAPAN",
     content: "Researching functional quantum computing as a doctoral student.",
-    icon: "university"
+    icon: "university",
+    lineVariant: "dashed",
   },
   {
     name: "University of Tokyo",
