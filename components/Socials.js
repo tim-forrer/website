@@ -1,12 +1,12 @@
-import { social } from "../public/me";
 import Link from "next/link";
-import { iconLibrary } from "../public/icons"
 import { Group, ThemeIcon } from "@mantine/core";
+import { person } from "../public/me"
+import { iconLibrary } from "../public/icons"
 
-export default function Socials( {size=30} ) {
+export default function Socials({ size=30 }) {
   return(
     <Group gap={2}>
-      {social.map(({ icon, link }) => {
+      {person.socials.map(({ icon, link }) => {
         const IconComponent = iconLibrary[icon];
         return (
           <Link
@@ -22,4 +22,4 @@ export default function Socials( {size=30} ) {
       })}
     </Group>
   )
-}
+  }

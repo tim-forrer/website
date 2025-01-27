@@ -1,75 +1,69 @@
-const person = {
-  firstName: "Tim",
-  lastName: "Forrer",
-  get name() {
-    return `${this.firstName} ${this.lastName}`;
-  },
-  role: "Doctoral Student",
-  avatar: "/images/me.jpg",
-  location: "Asia/Tokyo", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Japanese", "Mandarin"],
-  bio: (
-    <>
-    Doctoral student at the University of Tokyo.<br />
-    Currently researching methods of functionally programming quantum computers.<br />
-    <br />
-    Outside of research, I'm interested in anything that helps us learn more about the world.
-    I'm currently teaching myself data science/ML through Kaggle, have taken courses from the Graduate School of Economics, and enjoy taking photos.
-    </>
-  ),
-}
-
-const education = [
+const events = [
   {
-    id: 0,
-    institution: "University of Tokyo",
-    country: "Japan",
-    qualification: "PhD",
+    name: "TBD",
+    get key() {
+      return `${this.name}`.replace(/\s/g, "");
+    },
+    title: "",
+    dateStart: "",
+    dateEnd: "",
+    country: "",
+    content: "Actively looking for next opportunity - please reach out if you're hiring!",
+    lineVariant: "dashed",
+    icon: "question",
+  },
+  {
+    name: "University of Tokyo",
+    get key() {
+      return `${this.name}`.replace(/\s/g, "");
+    },
+    title: "PhD",
     dateStart: "2022-10-01",
     dateEnd: "2026-03-31",
-    info: (
-      <>
-        Supervised by Prof. Mio Murao.
-        Research based on two topics:
-        (1) functional programming for quantum computers (higher-order quantum theory),
-        (2) distributed quantum computing (continuing from work done as a research student).
-      </>
-    ),
+    country: "JAPAN",
+    content: "Researching functional quantum computing as a doctoral student.",
+    icon: "university",
+    lineVariant: "dashed",
   },
   {
-    id: 1,
-    institution: "University of Tokyo",
-    country: "Japan",
-    qualification: "Research Student",
+    name: "University of Tokyo",
+    get key() {
+      return `${this.name}`.replace(/\s/g, "");
+    },
+    title: "Research Student",
     dateStart: "2021-10-01",
     dateEnd: "2022-09-30",
-    info: (
-      <>
-        Supervised by Prof. Mio Murao.
-        Research based on distributed quantum computing.
-      </>
-    )
+    country: "JAPAN",
+    content: "Explored distributed quantum computing as a research student.",
+    icon: "distributed"
   },
   {
-    id: 2,
-    institution: "Durham University",
-    country: "UK",
-    qualification: "MSci (First Class)",
+    name: "Durham University",
+    get key() {
+      return `${this.name}`.replace(/\s/g, "");
+    },
+    title: "MSci (First Class Hons.)",
     dateStart: "2017-10-01",
     dateEnd: "2021-07-31",
-    info: (
-      <>
-        Studied maths and physics under the Natural Sciences programme.
-        Modules included linear algebra, multivariable calculus, probability, and advanced theoretical physics.<br />
-        <br />
-        Awarded the Natural Sciences award for Outstanding Achievement in both 2016 and 2017 in recognition of my academic performance.
-      </>
-    )
+    country: "UK",
+    content: "Studied maths and physics under the Natural Sciences programme.",
+    icon: "math"
+  },
+  {
+    name: "Reading Blue Coat School",
+    get key() {
+      return `${this.name}`.replace(/\s/g, "");
+    },
+    title: "Student",
+    dateStart: "2010-09-01",
+    dateEnd: "2017-08-31",
+    country: "UK",
+    content: "",
+    icon: "school",
   },
 ]
 
-
-const social = [
+const socials = [
   {
     name: "GitHub",
     icon: "github",
@@ -92,8 +86,19 @@ const social = [
   },
 ];
 
+const person = {
+  firstName: "Tim",
+  lastName: "Forrer",
+  get name() {
+    return `${this.firstName} ${this.lastName}`;
+  },
+  avatar: "/images/me.jpg",
+  location: "Asia/Tokyo", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "Japanese", "Mandarin"],
+  events: events,
+  socials: socials,
+}
+
 export {
   person,
-  social,
-  education
 }

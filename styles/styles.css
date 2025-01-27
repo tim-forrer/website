@@ -1,3 +1,7 @@
 body {
-  background-color: var(--mantine-color-red-0)
+  background-color: var(--mantine-color-red-0);
+}
+
+.roundImg {
+  border-radius:50%;
 }
