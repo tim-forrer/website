@@ -9,7 +9,6 @@
     "@mantine/core": "^7.16.1",
     "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3",
-    "motion": "^12.0.5",
     "next": "^15.1.6",
     "react": "18.2.0",
     "react-circle-flags": "^0.0.23",
