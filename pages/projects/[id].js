@@ -1,5 +1,5 @@
 import { getAllProjectIds, getProjectData } from "../../lib/projects";
-import { Group, Title } from "@mantine/core";
+import { Group, Title, Text } from "@mantine/core";
 import Date from "../../components/Date"
 import TagGroup from "../../components/TagGroup";
 
@@ -8,7 +8,7 @@ export default function Project({ projectData }) {
     <>
       <Group justify="space-between">
         <Title order={2}>{projectData.title}</Title>
-        <Date dateString={projectData.date} dateFormat="do MMM yyyy"/>
+        <Text size="sm"><Date dateString={projectData.date} dateFormat="do MMM yyyy"/></Text>
       </Group>
       <TagGroup data={projectData} />
     </>
