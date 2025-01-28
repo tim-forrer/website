@@ -17,19 +17,19 @@ export async function getStaticProps() {
 
 export default function About() {
   const timelineItems = person.events.map((event) => {
+    const title = <>
+      <Title order={4} component="span">
+        {event.name}
+      </Title>
+      <Text size="xs" component="span" ml="xs">
+        {event.country}
+      </Text>
+    </>
+
     return (
       <Timeline.Item
         key={event.key}
-        title={
-          <>
-            <Title order={5} component="span">
-              {event.name}
-            </Title>
-            <Text size="xs" component="span" ml="xs">
-              {event.country}
-            </Text>
-          </>
-        }
+        title={title}
         lineVariant={event.lineVariant}
         bullet={iconLibrary[event.icon] ? createElement(iconLibrary[event.icon], { size: 16 }) : null}
       >
@@ -37,7 +37,7 @@ export default function About() {
           { event.dateStart ? <><Date dateString={event.dateStart} /> - </> : event.dateStart }
           { event.dateEnd ? <Date dateString={event.dateEnd} /> : event.dateEnd }
         </Text>
-        <Text c="dimmed" size="sm" mt={4}>{event.content}</Text>
+        <Text c="dimmed" size="sm" mt={2}>{event.content}</Text>
       </Timeline.Item>
     );
   })
@@ -47,7 +47,7 @@ export default function About() {
           <Avatar src="/images/me.jpg" />
         </Center>
         <Text>{person.bio}</Text>
-      <Title order={2}><SkewMark>Tim</SkewMark>eline</Title>
+      <Title order={1}><SkewMark>Tim</SkewMark>eline</Title>
       <Timeline active={3} lineWidth={3} reverseActive color={theme.colors.blue[3]}>
         {timelineItems}
       </Timeline>

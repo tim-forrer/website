@@ -8,7 +8,7 @@ export default function Project({ projectData }) {
   return(
     <>
       <Group justify="space-between">
-        <Title order={2}>{projectData.title}</Title>
+        <Title order={1}>{projectData.title}</Title>
         <Text size="sm"><Date dateString={projectData.date} dateFormat="do MMM yyyy"/></Text>
       </Group>
       {projectData.tags ? <TagGroup data={projectData} /> : null}
