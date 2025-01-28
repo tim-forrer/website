@@ -1,7 +1,7 @@
 ---
 title: "Distributed quantum computing"
 date: "2024-08-06"
-summary: "How can multiple quantum computers be linked together via entanglement to run large computations?"
+summary: "Quantum computers individually are limited to small computations. Can we combine them together to run larger ones?"
 link: "https://github.com/CQCL/pytket-dqc"
 images:
   - "/images/projects/dqc/ejpp.png"
