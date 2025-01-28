@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 const links = [
   { link: '/', label: 'Home' },
   { link: '/about', label: 'About' },
+  { link: '/projects', label: 'Projects' },
 ];
 
 export default function HeaderSimple() {
@@ -33,7 +34,7 @@ export default function HeaderSimple() {
       <Group justify='space-between' align='center'>
         <Group>
           <ThemeIcon>
-            <Image src='TF-logo.svg' w='150%'/>
+            <Image src='/TF-logo.svg' w='150%' alt='Logo displaying the initial TF'/>
           </ThemeIcon>
           <Stack gap={0}>
             <Title order={2}>Tim Forrer</Title>

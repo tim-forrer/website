@@ -44,7 +44,7 @@ export default function About() {
   return (
     <Stack>
         <Center>
-          <Avatar src="/images/me.jpg" />
+          <Avatar src="/images/me.jpg" alt="Headshot of Tim Forrer" priority={true} quality={50}/>
         </Center>
         <Text>{person.bio}</Text>
       <Title order={2}><SkewMark>Tim</SkewMark>eline</Title>

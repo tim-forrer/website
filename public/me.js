@@ -1,9 +1,10 @@
-const events = [
+function generateKey(string) {
+  return string.replace(/\s/g, '')
+}
+
+const eventsData = [
   {
     name: "TBD",
-    get key() {
-      return `${this.name}`.replace(/\s/g, "");
-    },
     title: "",
     dateStart: "",
     dateEnd: "",
@@ -14,9 +15,6 @@ const events = [
   },
   {
     name: "University of Tokyo",
-    get key() {
-      return `${this.name}`.replace(/\s/g, "");
-    },
     title: "PhD",
     dateStart: "2022-10-01",
     dateEnd: "2026-03-31",
@@ -27,9 +25,6 @@ const events = [
   },
   {
     name: "University of Tokyo",
-    get key() {
-      return `${this.name}`.replace(/\s/g, "");
-    },
     title: "Research Student",
     dateStart: "2021-10-01",
     dateEnd: "2022-09-30",
@@ -39,9 +34,6 @@ const events = [
   },
   {
     name: "Durham University",
-    get key() {
-      return `${this.name}`.replace(/\s/g, "");
-    },
     title: "MSci (First Class Hons.)",
     dateStart: "2017-10-01",
     dateEnd: "2021-07-31",
@@ -51,9 +43,6 @@ const events = [
   },
   {
     name: "Reading Blue Coat School",
-    get key() {
-      return `${this.name}`.replace(/\s/g, "");
-    },
     title: "Student",
     dateStart: "2010-09-01",
     dateEnd: "2017-08-31",
@@ -62,6 +51,11 @@ const events = [
     icon: "school",
   },
 ]
+
+const events = eventsData.map((event) => ({
+  ...event,
+  key: generateKey(`${event.name}-${event.title}`)
+}))
 
 const socials = [
   {
