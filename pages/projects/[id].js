@@ -1,11 +1,16 @@
 import { getAllProjectIds, getProjectData } from "../../lib/projects";
+import { Group, Title } from "@mantine/core";
+import Date from "../../components/Date"
+import TagGroup from "../../components/TagGroup";
 
 export default function Project({ projectData }) {
   return(
     <>
-      {projectData.title} <br />
-      {projectData.id} <br />
-      {projectData.date}
+      <Group justify="space-between">
+        <Title order={2}>{projectData.title}</Title>
+        <Date dateString={projectData.date} dateFormat="do MMM yyyy"/>
+      </Group>
+      <TagGroup data={projectData} />
     </>
   )
 }
