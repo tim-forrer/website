@@ -7,6 +7,14 @@ import { theme } from "../styles/theme";
 import { person } from "../public/me";
 import { iconLibrary } from "../public/icons";
 
+export async function getStaticProps() {
+  return {
+    props: {
+      title: "About"
+    }
+  }
+}
+
 export default function About() {
   const timelineItems = person.events.map((event) => {
     return (

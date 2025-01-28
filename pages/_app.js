@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <GlobalHead/>
-      {/* <PageHead title={pageProps}/> */}
+      <PageHead title={`Tim | ${pageProps.title}`}/>
       <MantineProvider theme={theme}>
         <Layout>
           <Component {...pageProps}/>
