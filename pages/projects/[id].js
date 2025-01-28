@@ -2,6 +2,7 @@ import { getAllProjectIds, getProjectData } from "../../lib/projects";
 import { Group, Title, Text } from "@mantine/core";
 import Date from "../../components/Date"
 import TagGroup from "../../components/TagGroup";
+import Markdown from "../../components/Markdown"
 
 export default function Project({ projectData }) {
   return(
@@ -10,7 +11,8 @@ export default function Project({ projectData }) {
         <Title order={2}>{projectData.title}</Title>
         <Text size="sm"><Date dateString={projectData.date} dateFormat="do MMM yyyy"/></Text>
       </Group>
-      <TagGroup data={projectData} />
+      {projectData.tags ? <TagGroup data={projectData} /> : null}
+      <Markdown contentHtml={projectData.contentHtml} />
     </>
   )
 }
@@ -26,7 +28,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   // for given params.id, fetch the data for that page
-  const projectData = getProjectData(params.id);
+  const projectData = await getProjectData(params.id);
   return {
     props: {
       projectData,
