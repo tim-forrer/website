@@ -5,16 +5,19 @@ import { theme } from '../styles/theme';
 import { MantineProvider } from '@mantine/core';
 import '../styles/styles.css'
 import Layout from '../components/Layout';
-import { AnimatePresence } from 'motion/react';
+import GlobalHead from '../components/GlobalHead';
+import PageHead from '../components/PageHead';
 
-export default function App({ Component, pageProps, router }) {
+export default function App({ Component, pageProps }) {
   return (
-    <MantineProvider theme={theme}>
-      <Layout>
-        <AnimatePresence mode="wait">
-          <Component {...pageProps} key={router.route} />
-        </AnimatePresence>
-      </Layout>
-    </MantineProvider>
+    <>
+      <GlobalHead/>
+      {/* <PageHead title={pageProps}/> */}
+      <MantineProvider theme={theme}>
+        <Layout>
+          <Component {...pageProps}/>
+        </Layout>
+      </MantineProvider>
+    </>
   );
 }

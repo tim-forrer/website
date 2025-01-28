@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { person } from "../public/me";
 
-export default function MyHead({ title }) {
+export default function GlobalHead() {
   return (
     <Head>
       <link rel="icon" href="/TF-logo.svg" />
@@ -17,7 +17,6 @@ export default function MyHead({ title }) {
       />
       <meta name="og:title" content={person.name} />
       <meta name="twitter:card" content="summary_large_image" />
-      <title>{title}</title>
     </Head>
   );
 }
