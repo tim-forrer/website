@@ -50,7 +50,18 @@ const themeOverride: MantineThemeOverride = createTheme({
   },
 
   primaryColor: 'blue',
-  primaryShade: 3,
+  primaryShade: 2,
+  
+  headings: {
+    sizes: {
+      h1: { fontSize: rem(26) },
+      h2: { fontSize: rem(22) },
+      h3: { fontSize: rem(18) },
+      h4: { fontSize: rem(16) },
+      h5: { fontSize: rem(12) },
+      h6: { fontSize: rem(10) },
+    }
+  },
 
   components: {
     /* Mantine component overrides */

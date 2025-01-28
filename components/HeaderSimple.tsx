@@ -37,7 +37,7 @@ export default function HeaderSimple() {
             <Image src='/TF-logo.svg' w='150%' alt='Logo displaying the initial TF'/>
           </ThemeIcon>
           <Stack gap={0}>
-            <Title order={2}>Tim Forrer</Title>
+            <Title order={1}>Tim Forrer</Title>
             <Text size='sm'>Doctoral Student @ UTokyo</Text>
           </Stack>
         </Group>

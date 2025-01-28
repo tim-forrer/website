@@ -18,3 +18,6 @@ This is a record for myself in case I forget where things are meant to go.
 ## Backend
 - Add project pages.
 - Add a Chatbot that can answer questions about me.
+
+## Structure
+- Rethink how icons are imported per file.

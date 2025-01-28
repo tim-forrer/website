@@ -5,6 +5,10 @@ summary: "Just like classical functional programming, how can quantum functions 
 link: ""
 images:
   - "/images/projects/functional-circuits/basic-condition.png"
+tags:
+  - "quantum"
+  - "python"
+  - "research"
 ---
 
 # Abstract
