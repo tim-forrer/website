@@ -1,10 +1,14 @@
 ---
 title: "Distributed quantum computing"
 date: "2024-08-06"
-summary: "Quantum computers individually are limited to small computations. Can we combine them together to run larger ones?"
+summary: "Quantum computers individually are limited to relatively small computations. Can we combine them together to run larger ones?"
 link: "https://github.com/CQCL/pytket-dqc"
 images:
   - "/images/projects/dqc/ejpp.png"
+tags:
+  - python
+  - research
+  - quantum
 ---
 
 ## Abstract
