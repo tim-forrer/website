@@ -16,7 +16,7 @@ export async function getStaticProps() {
 }
 
 export default function About() {
-  const timelineItems = person.events.map((event) => {
+  const timelineItems = person.events.map((event, index) => {
     const title = <>
       <Title order={4} component="span">
         {event.name}
@@ -28,7 +28,7 @@ export default function About() {
 
     return (
       <Timeline.Item
-        key={event.key}
+        key={`${event.key}-${index}`}
         title={title}
         lineVariant={event.lineVariant}
         bullet={iconLibrary[event.icon] ? createElement(iconLibrary[event.icon], { size: 16 }) : null}
