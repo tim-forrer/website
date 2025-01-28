@@ -1,3 +1,4 @@
 .badge {
-  background-color: var(--mantine-color-gray-3)
+  background-color: var(--mantine-color-gray-2);
+  color: var(--mantine-color-gray-6)
 }

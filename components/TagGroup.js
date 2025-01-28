@@ -3,9 +3,10 @@ import styles from "./TagGroup.module.css";
 import { HiHashtag } from "react-icons/hi2";
 
 function TagsAsBadges(data, size) {
-  const hashtag = <HiHashtag size={10} />
-  return data.tags.map((tag) => (
-    <Badge size={size} key={data.id} className={styles.badge} leftSection={hashtag}>{tag}</Badge>
+  const hashtag = <HiHashtag size={10} />;
+  const sortedTags = data.tags.sort();
+  return sortedTags.map((tag, index) => (
+    <Badge size={size} key={`${data.id}-${index}`} className={styles.badge} leftSection={hashtag}>{tag}</Badge>
   ));
 }
 
