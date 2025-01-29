@@ -13,7 +13,8 @@ const links = [
 
 export default function HeaderSimple() {
   const router = useRouter();
-  const [active, setActive] = useState(router.pathname);
+  const currentLink = router.pathname.match(/^\/[^\/]+/)?.[0] || '/';
+  const [active, setActive] = useState(currentLink);
 
   const items = links.map((link) => (
     <Link
