@@ -52,9 +52,9 @@ const eventsData = [
   },
 ]
 
-const events = eventsData.map((event) => ({
+const events = eventsData.map((event, index) => ({
   ...event,
-  key: generateKey(`${event.name}-${event.title}`)
+  key: generateKey(`${event.name}-${index}`)
 }))
 
 const socials = [
