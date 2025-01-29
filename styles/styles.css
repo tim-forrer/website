@@ -5,3 +5,16 @@ body {
 .roundImg {
   border-radius:50%;
 }
+
+a {
+  color: var(--mantine-black);
+  text-decoration: underline;
+  text-decoration-color: var(--mantine-primary-color-3);
+  position: relative;
+}
+
+a:hover {
+  color: var(--mantine-color-white);
+  background-color: var(--mantine-primary-color-3);
+}
+
