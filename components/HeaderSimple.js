@@ -19,7 +19,7 @@ export default function HeaderSimple() {
 
   return (
     <header className={classes.header}>
-      <Group justify='space-between' align='center'>
+      <Group className={classes.group}>
         <Group>
           <ThemeIcon>
             <Image src='/TF-logo.svg' w='150%' alt='Logo displaying the initial TF'/>
