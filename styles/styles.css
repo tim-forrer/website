@@ -10,7 +10,7 @@ a {
   color: var(--mantine-black);
   text-decoration: underline;
   text-decoration-color: var(--mantine-primary-color-3);
-  position: relative;
+  line-height: 1;
 }
 
 a:hover {
