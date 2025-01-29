@@ -1,8 +1,7 @@
 .skew {
   position: relative;
-  /* z-index: 1; */
   display: inline-block;
-  background-color: var(--mantine-color-blue-3);
+  background-color: var(--mantine-primary-color-3);
   color: white;
 }
 
