@@ -13,8 +13,6 @@ export default function ProjectHome({ allProjectData }) {
   );
 }
 
-
-
 export async function getStaticProps() {
   const allProjectIds = getAllProjectIds();
   
