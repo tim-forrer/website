@@ -1,8 +1,6 @@
-import { useState } from 'react';
 import { Group, Stack, Title, Text, Image, ThemeIcon } from '@mantine/core';
 import classes from './HeaderSimple.module.css';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 
 // Change this to be dynamic
 const links = [
@@ -12,20 +10,9 @@ const links = [
 ];
 
 export default function HeaderSimple() {
-  const router = useRouter();
-  const currentLink = router.pathname.match(/^\/[^\/]+/)?.[0] || '/';
-  const [active, setActive] = useState(currentLink);
 
   const items = links.map((link) => (
-    <Link
-      key={link.label}
-      href={link.link}
-      className={classes.link}
-      data-active={active === link.link || undefined}
-      onClick={() => {
-        setActive(link.link);
-      }}
-    >
+    <Link key={link.label} href={link.link}>
       {link.label}
     </Link>
   ));

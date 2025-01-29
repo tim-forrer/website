@@ -1,3 +1,14 @@
+import { FaPython, FaReact } from "react-icons/fa6";
+import { GoGraph } from "react-icons/go";
+import { GrTestDesktop } from "react-icons/gr";
+import { IoLogoJavascript } from "react-icons/io";
+import { IoLanguage } from "react-icons/io5";
+import { LuBrainCircuit } from "react-icons/lu";
+import { SiNextdotjs, SiOllama } from "react-icons/si";
+import { TbChartInfographic, TbGitMerge, TbLetterA } from "react-icons/tb";
+import { mdiSyllabaryHiragana } from '@mdi/js';
+import Icon from "@mdi/react";
+
 function generateKey(string) {
   return string.replace(/\s/g, '')
 }
@@ -52,9 +63,9 @@ const eventsData = [
   },
 ]
 
-const events = eventsData.map((event) => ({
+const events = eventsData.map((event, index) => ({
   ...event,
-  key: generateKey(`${event.name}-${event.title}`)
+  key: generateKey(`${event.name}-${index}`)
 }))
 
 const socials = [
@@ -80,6 +91,25 @@ const socials = [
   },
 ];
 
+const skills = [
+  { label: "Prototyping", icon: <GrTestDesktop/>},
+  { label: "Forecasting", icon: <GoGraph />},
+  { label: "Python", icon: <FaPython/>},
+  { label: "Data analysis", icon: <TbChartInfographic />},
+  { label: "Git", icon: <TbGitMerge />},
+  { label: "LLMs", icon: <LuBrainCircuit style={{ transform: 'rotate(90deg)'}} />},
+  { label: "Javascript", icon: <IoLogoJavascript />},
+  { label: "Ollama", icon: <SiOllama/>},
+  { label: "Next", icon: <SiNextdotjs/>},
+  { label: "React", icon: <FaReact/>},
+]
+
+const languages = [
+  { label: "English", icon: <TbLetterA/>},
+  { label: "Japanese", icon: <Icon path={mdiSyllabaryHiragana} size={0.75} />},
+  {label: "Mandarin", icon: <IoLanguage/>}
+]
+
 const person = {
   firstName: "Tim",
   lastName: "Forrer",
@@ -88,9 +118,10 @@ const person = {
   },
   avatar: "/images/me.jpg",
   location: "Asia/Tokyo", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Japanese", "Mandarin"],
+  languages: languages,
   events: events,
   socials: socials,
+  skills: skills,
 }
 
 export {
