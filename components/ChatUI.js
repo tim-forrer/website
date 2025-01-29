@@ -10,7 +10,7 @@ function ChatUI() {
   const botColor = theme.colors.gray[1];
   const [messages, setMessages] = useState([{text: initialMessage, sender: 'bot'}]); // Stores chat messages
   const [input, setInput] = useState(''); // Stores the current input
-  const [disabled, setDisabled] = useState(true)
+  const [disabled, setDisabled] = useState(false)
   const scrollAreaRef = useRef(null); // Reference for the ScrollArea
 
   const handleSend = async () => {
