@@ -80,6 +80,34 @@ const socials = [
   },
 ];
 
+const skills = [
+  "Ollama",
+  "Forecasting",
+  "LLMs",
+  "Data analysis",
+  "Git",
+  "Python",
+  "Javascript",
+  "Next",
+  "React",
+  "Prototyping",
+]
+
+const languages = [
+  {
+    label: "English",
+    value: 100
+  },
+  {
+    label: "Japanese",
+    value: 65
+  },
+  {
+    label: "Mandarin",
+    value: 65
+  }
+]
+
 const person = {
   firstName: "Tim",
   lastName: "Forrer",
@@ -88,9 +116,10 @@ const person = {
   },
   avatar: "/images/me.jpg",
   location: "Asia/Tokyo", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Japanese", "Mandarin"],
+  languages: languages,
   events: events,
   socials: socials,
+  skills: skills,
 }
 
 export {
