@@ -1,7 +1,8 @@
-import { Stack, Title, Text, Badge, Group, SemiCircleProgress } from '@mantine/core';
+import { Stack, Title, Text, Badge, Group } from '@mantine/core';
 import ChatUI from '../components/ChatUI';
 import Link from 'next/link';
 import { person } from '../public/me'
+import { TbLanguageHiragana } from 'react-icons/tb';
 
 export async function getStaticProps() {
   return {
@@ -22,18 +23,8 @@ export default function Home() {
       </Text>
       <Stack gap={8}>
         <Title order={1}>Skills</Title>
-        <Group justify='space-between' align='center'>
-          {person.languages.map((language) => (
-            <SemiCircleProgress
-            size={150}
-            key={language.label} 
-            label={language.label}
-            value={language.value}
-            emptySegmentColor="var(--mantine-color-gray-3)"
-          />))}
-        </Group>
-        <Group gap='xs'>
-          {person.skills.map((skill) => (<Badge size='lg'>{skill}</Badge>))}
+        <Group gap='xs' justify='space-between'>
+          {person.languages.concat(person.skills).map((skill) => (<Badge leftSection={skill.icon} key={skill.label} size='lg'>{skill.label}</Badge>))}
         </Group>
       </Stack>
       <Stack gap={8}>
