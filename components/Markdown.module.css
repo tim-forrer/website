@@ -1,0 +1,4 @@
+/* Custom styling for headers for markdown content */
+.markdown h2 {
+  border-bottom: 1px solid var(--mantine-color-gray-3);
+}
