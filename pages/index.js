@@ -2,7 +2,6 @@ import { Stack, Title, Text, Badge, Group } from '@mantine/core';
 import ChatUI from '../components/ChatUI';
 import Link from 'next/link';
 import { person } from '../public/me'
-import { TbLanguageHiragana } from 'react-icons/tb';
 
 export async function getStaticProps() {
   return {
@@ -28,7 +27,7 @@ export default function Home() {
         </Group>
       </Stack>
       <Stack gap={8}>
-        <Title order={1} id="ll-tim">LL-tiM - a personalised LLM</Title>
+        <Title order={1} id="ll-tim">LL-tiM</Title>
         <ChatUI />
         {/* You can read about the process of building LL-tiM here! */}
       </Stack>
