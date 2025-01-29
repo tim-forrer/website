@@ -1,7 +1,8 @@
-import { Stack, Title, Text, Badge, Group } from '@mantine/core';
+import { Stack, Title, Text } from '@mantine/core';
 import ChatUI from '../components/ChatUI';
 import Link from 'next/link';
 import { person } from '../public/me'
+import SkillsGroup from '../components/SkillsGroup';
 
 export async function getStaticProps() {
   return {
@@ -22,9 +23,7 @@ export default function Home() {
       </Text>
       <Stack gap={8}>
         <Title order={1}>Skills</Title>
-        <Group gap='xs' justify='space-between'>
-          {person.languages.concat(person.skills).map((skill) => (<Badge leftSection={skill.icon} key={skill.label} size='lg'>{skill.label}</Badge>))}
-        </Group>
+        <SkillsGroup />
       </Stack>
       <Stack gap={8}>
         <Title order={1} id="ll-tim">LL-tiM</Title>
