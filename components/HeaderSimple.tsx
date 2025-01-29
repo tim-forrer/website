@@ -12,20 +12,9 @@ const links = [
 ];
 
 export default function HeaderSimple() {
-  const router = useRouter();
-  const currentLink = router.pathname.match(/^\/[^\/]+/)?.[0] || '/';
-  const [active, setActive] = useState(currentLink);
 
   const items = links.map((link) => (
-    <Link
-      key={link.label}
-      href={link.link}
-      className={classes.link}
-      data-active={active === link.link || undefined}
-      onClick={() => {
-        setActive(link.link);
-      }}
-    >
+    <Link key={link.label} href={link.link}>
       {link.label}
     </Link>
   ));
