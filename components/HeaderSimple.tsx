@@ -1,8 +1,6 @@
-import { useState } from 'react';
 import { Group, Stack, Title, Text, Image, ThemeIcon } from '@mantine/core';
 import classes from './HeaderSimple.module.css';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 
 // Change this to be dynamic
 const links = [
