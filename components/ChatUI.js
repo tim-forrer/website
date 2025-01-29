@@ -80,7 +80,6 @@ function ChatUI() {
             <Button onClick={handleSend} disabled={disabled}>Send</Button>
           </Group>
         </Stack>
-        <small>I'm temporarily disabled whilst being upgraded to a newer LLM model!</small>
       </Paper>
   );
 }
