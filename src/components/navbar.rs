@@ -29,7 +29,7 @@ pub fn Shell() -> Element {
                 }
             }
             Link {
-                to: Route::Home,
+                to: "https://github.com/tim-forrer",
                 Icon {
                     icon: fa_brands_icons::FaGithub,
                 }
