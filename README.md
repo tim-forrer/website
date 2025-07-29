@@ -1,38 +1,47 @@
-# Development
+# [timforrer.xyz](timforrer.xyz)
+This is a personal portfolio website
+- Written in  Rust!
+- Styled with  TailwindCSS!
 
-Your new jumpstart project includes basic organization with an organized `assets` folder and a `components` folder.
-If you chose to develop with the router feature, you will also have a `views` folder.
-
+## Project Structure
 ```
 project/
-├─ assets/ # Any assets that are used by the app should be placed here
+├─ assets/ 
 ├─ src/
-│  ├─ main.rs # The entrypoint for the app.
+│  ├─ main.rs # App entrypoint
 │  ├─ components/
-│  │  ├─ mod.rs # Defines the components module
-│  │  ├─ hero.rs # The Hero component for use in the home page
-├─ Cargo.toml # The Cargo.toml file defines the dependencies and feature flags for your project
+│  │  ├─ mod.rs
+│  │  ├─ home.rs
+│  │  ├─ gallery.rs
+│  │  ├─ navbar.rs
+│  │  ├─ page404.rs
+│  │  ├─ projects.rs
+├─ Cargo.toml 
+├─ Dioxus.toml
+├─ spin.toml
 ```
 
-### Tailwind
-1. Install npm: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
-2. Install the Tailwind CSS CLI: https://tailwindcss.com/docs/installation
-3. Run the following command in the root of the project to start the Tailwind CSS compiler:
-
+## Serving locally
+ To start the Tailwind watcher:
 ```bash
 npx tailwindcss -i ./tailwind.css -o ./assets/tailwind.css --watch
 ```
 
-### Serving Your App
-
-Run the following command in the root of your project to start developing with the default platform:
-
+ To start the web app
 ```bash
 dx serve
 ```
 
-To run for a different platform, use the `--platform platform` flag. E.g.
-```bash
-dx serve --platform desktop
-```
+## Roadmap
+- [ ] Create the `/projects` page
+    - [ ] Allow for  components
+    - [ ] Create a folder with  files for each project
+    - [ ] Dynamically create pages that inject the content of each file
+    - [ ] Dynamically add routes to each of these pages
+    - [ ] Populate `/projects` page with these pages
 
+- [ ] Dynamically add images to `/gallery` page
+    - [ ] Can perform queries to [Unsplash](www.unsplash.com) API to get image urls
+    - [ ] Cache the result to some database
+    - [ ] Query the database for the urls
+    - [ ] Use urls to load images
