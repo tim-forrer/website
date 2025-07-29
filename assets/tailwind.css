@@ -9,8 +9,17 @@
       "Courier New", monospace;
     --color-black: #000;
     --color-white: #fff;
+    --spacing: 0.25rem;
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-df-text: #575279;
+    --color-df-bg: #faf4ed;
+    --color-df-select: #d0d8d8;
+    --color-nf-text: #cdcecf;
+    --color-nf-bg: #2e3440;
+    --color-nf-select: #3e4a5b;
   }
 }
 @layer base {
@@ -162,8 +171,36 @@
   .visible {
     visibility: visible;
   }
+  .m-1 {
+    margin: calc(var(--spacing) * 1);
+  }
+  .m-auto {
+    margin: auto;
+  }
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
+  }
+  .flex {
+    display: flex;
+  }
+  .grid {
+    display: grid;
+  }
   .table {
     display: table;
+  }
+  .size-10 {
+    width: calc(var(--spacing) * 10);
+    height: calc(var(--spacing) * 10);
+  }
+  .h-screen {
+    height: 100vh;
+  }
+  .max-w-7 {
+    max-width: calc(var(--spacing) * 7);
+  }
+  .max-w-7\/8 {
+    max-width: calc(7/8 * 100%);
   }
   .border-collapse {
     border-collapse: collapse;
@@ -174,15 +211,48 @@
   .resize {
     resize: both;
   }
+  .list-disc {
+    list-style-type: disc;
+  }
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .items-center {
+    align-items: center;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
+  .gap-10 {
+    gap: calc(var(--spacing) * 10);
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .text-black {
-    color: var(--color-black);
+  .bg-df-bg {
+    background-color: var(--color-df-bg);
   }
-  .text-white {
-    color: var(--color-white);
+  .bg-df-select {
+    background-color: var(--color-df-select);
+  }
+  .bg-white {
+    background-color: var(--color-white);
+  }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
+  }
+  .pl-5 {
+    padding-left: calc(var(--spacing) * 5);
+  }
+  .text-df-text {
+    color: var(--color-df-text);
   }
   .underline {
     text-decoration-line: underline;
@@ -190,6 +260,47 @@
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
+  }
+  .sm\:p-5 {
+    @media (width >= 40rem) {
+      padding: calc(var(--spacing) * 5);
+    }
+  }
+  .sm\:px-30 {
+    @media (width >= 40rem) {
+      padding-inline: calc(var(--spacing) * 30);
+    }
+  }
+  .sm\:py-10 {
+    @media (width >= 40rem) {
+      padding-block: calc(var(--spacing) * 10);
+    }
+  }
+  .dark\:bg-black {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-black);
+    }
+  }
+  .dark\:bg-nf-bg {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-nf-bg);
+    }
+  }
+  .dark\:bg-nf-select {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-nf-select);
+    }
+  }
+  .dark\:text-nf-text {
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-nf-text);
+    }
+  }
+}
+@layer base {
+  h1 {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
 }
 @property --tw-rotate-x {

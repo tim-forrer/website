@@ -10,28 +10,28 @@ pub fn Shell() -> Element {
     rsx! {
         div {
             id: "navbar",
-            Link { to: Route::Home, img {src: LOGO} }
+            class: "bg-df-select dark:bg-nf-select flex gap-5 items-center",
+            Link { to: Route::Home, img { class: "size-10 m-1", src: LOGO } }
             Link { to: Route::Projects, "Projects" }
             Link { to: Route::Gallery, "Gallery" }
         }
 
-        div {
-            id: "content",
-            Outlet::<Route> {}
-        }
+        Outlet::<Route> {}
 
         footer {
-            id: "footer",
+            class: "flex gap-2 justify-center mt-10",
             Link {
                 to: "https://www.linkedin.com/in/timothy-f-46158b107/",
                 Icon {
                     icon: fa_brands_icons::FaLinkedin,
+                    class: "size-10",
                 }
             }
             Link {
                 to: "https://github.com/tim-forrer",
                 Icon {
                     icon: fa_brands_icons::FaGithub,
+                    class: "size-10",
                 }
             }
         }

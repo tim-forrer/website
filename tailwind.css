@@ -1,2 +1,17 @@
 @import "tailwindcss";
 @source "./src/**/*.{rs,html,css}";
+
+@theme {
+  --color-df-text: #575279;
+  --color-df-bg: #faf4ed;
+  --color-df-select: #d0d8d8;
+  --color-nf-text: #cdcecf;
+  --color-nf-bg: #2e3440;
+  --color-nf-select: #3e4a5b;
+}
+
+@layer base {
+  h1 {
+    @apply text-3xl;
+  }
+}
