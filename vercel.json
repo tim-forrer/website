@@ -1,0 +1,5 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "dx bundle --platform web --release",
+  "outputDirectory": "target/dx/website/release/web/public/",
+}
