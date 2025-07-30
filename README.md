@@ -33,6 +33,11 @@ dx serve
 ```
 
 ## Roadmap
+- [ ] 🎨 Styling updates
+    - [ ] Load SVG such that its colours can be set by code
+    - [ ] Use  to set the correct light/dark mode colours
+    - [ ] Improve link styling so that they are highlighted on hover
+
 - [ ] Create the `/projects` page
     - [ ] Allow for  components
     - [ ] Create a folder with  files for each project
