@@ -35,7 +35,6 @@ fn App() -> Element {
         document::Link { rel: "icon", href: FAVICON }
 
         div {
-            class: "h-screen p-2 sm:px-30 sm:py-10 bg-df-bg dark:bg-nf-bg text-df-text dark:text-nf-text",
             Router::<Route> {}
         }
 
