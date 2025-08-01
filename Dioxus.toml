@@ -1,11 +1,12 @@
 [application]
+asset_dir = "assets"
 
 [web.app]
 
-# HTML title tag content
-title = "Tim Forrer"
+[web.watcher]
+reload_html = true
+watch_path = ["src", "assets"]
 
-# include `assets` in web platform
 [web.resource]
 
 [web.resource.dev]
