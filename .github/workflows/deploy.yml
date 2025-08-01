@@ -22,7 +22,6 @@ jobs:
 
       - name: Install npm dependencies
         run: npm install
-        working-directory: /
 
       - name: Install dioxus-cli
         run: cargo binstall dioxus-cli
