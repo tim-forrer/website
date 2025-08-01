@@ -7,7 +7,6 @@ mod components;
 
 const FAVICON: Asset = asset!("/assets/favicon.svg");
 const _: Asset = asset!("/assets/tailwind.css");
-const _: Asset = asset!("/assets/main.css");
 
 #[derive(Routable, PartialEq, Clone)]
 enum Route {
