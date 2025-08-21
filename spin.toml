@@ -19,3 +19,5 @@ npx @tailwindcss/cli -i ./tailwind.css -o ./assets/tailwind.css \
 && dx bundle --platform web
 """
 watch = ["src/**/*.rs", "Cargo.toml", "./tailwind.css"]
+[component.website.environment]
+FALLBACK_PATH = "index.html"

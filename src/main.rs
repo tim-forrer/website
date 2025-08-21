@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 
-use components::{Gallery, Home, Page404, Projects, Shell};
+use components::{Gallery, Home, Page404, Project, ProjectsTop, Shell};
 
 /// Define a components module that contains all shared components for our app.
 mod components;
@@ -15,8 +15,9 @@ enum Route {
     Home,
 
     #[route("/projects")]
-    Projects,
-
+    ProjectsTop,
+    #[route("/projects/:title")]
+    Project { title: String },
     #[route("/gallery")]
     Gallery,
 
@@ -34,9 +35,6 @@ fn App() -> Element {
         document::Title { "Tim Forrer" }
         document::Link { rel: "icon", href: FAVICON }
 
-        div {
-            Router::<Route> {}
-        }
-
+        div { Router::<Route> {} }
     }
 }

@@ -29,13 +29,13 @@ npx tailwindcss -i ./tailwind.css -o ./assets/tailwind.css --watch
 
  To start the web app
 ```bash
-dx serve
+spin build --up
 ```
 
 ## Roadmap
 - [ ] 🎨 Styling updates
     - [ ] Load SVG such that its colours can be set by code
-    - [ ] Use  to set the correct light/dark mode colours
+    - [x] Use  to set the correct light/dark mode colours
     - [ ] Improve link styling so that they are highlighted on hover
 
 - [ ] Create the `/projects` page

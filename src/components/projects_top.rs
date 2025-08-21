@@ -1,6 +1,6 @@
 use dioxus::prelude::*;
 
 #[component]
-pub fn Projects() -> Element {
+pub fn ProjectsTop() -> Element {
     rsx!()
 }

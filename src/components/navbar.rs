@@ -12,7 +12,7 @@ pub fn Shell() -> Element {
             id: "navbar",
             class: "bg-df-select dark:bg-nf-select flex gap-5 items-center",
             Link { to: Route::Home, img { class: "size-10 m-1", src: LOGO } }
-            Link { to: Route::Projects, "Projects" }
+            Link { to: Route::ProjectsTop, "Projects" }
             Link { to: Route::Gallery, "Gallery" }
         }
 
