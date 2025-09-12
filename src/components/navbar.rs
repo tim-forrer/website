@@ -19,7 +19,7 @@ pub fn Shell() -> Element {
         Outlet::<Route> {}
 
         footer {
-            class: "flex gap-2 justify-center mt-10",
+            class: "flex gap-2 justify-center my-20",
             Link {
                 to: "https://www.linkedin.com/in/timothy-f-46158b107/",
                 Icon {

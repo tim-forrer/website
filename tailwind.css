@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 @source "./src/**/*.{rs,html,css}";
 
 @theme {
@@ -15,4 +16,8 @@
     @apply text-3xl;
     @apply m-2;
   }
+}
+
+#typst-html blockquote + p {
+  text-align: right;
 }

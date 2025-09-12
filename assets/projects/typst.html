@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <h2>Building a website in Rust</h2>
+    <blockquote>The roots aren't deep but the seeds are planted.</blockquote>
+    <p>— https://areweguiyet.com/</p>
+    <p><a href="https://areweguiyet.com/">Are we GUI yet?</a> is a website that tracks how well supported building GUIs in Rust is.</p>
+    <p>The brief tl;dr about the status of GUI frameworks in Rust hints that it is a little ways off from the SOTA when it comes to GUIs.</p>
+    <p>Luckily I know next to nothing about building user interfaces, so I had no idea what I might be missing out with when I started out.</p>
+    <h3>Techstack</h3>
+    <p>One of my mottos for life is that “choices chain you”. So in many ways it's a good thing that there aren't many choices when it comes to choosing a full-stack Rust framework.</p>
+    <p>As I could tell, it seems that there are two choices:</p>
+    <ol>
+      <li><a href="https://dioxuslabs.com/">Dioxus</a></li>
+      <li><a href="https://www.leptos.dev/">Leptos</a></li>
+    </ol>
+    <p>I chose Dioxus, since it sounded cooler.¹</p>
+    <h3>Challenges</h3>
+    <h4>Docs</h4>
+    <p>The biggest challenge by far was the lack of documentation, and that which does exist has a fair chance of being out-of-date.</p>
+    <p>This is mostly down to the fact that Dioxus is not 1.0 yet (the current stable version is 0.6) so there are still breaking changes with each new update.</p>
+    <p>Given that the team working on Dioxus is very small, and its not an extremely popular framework, it's unsurprising that that these kinds of issues exist. There is a Discord server though, so if you are sufficiently stuck then there are people to turn to for help.</p>
+    <h4>Async Rust</h4>
+    <p>Dealing with a website/web app means that you will likely deal with a web server. This means dealing with async Rust, which is a commonly cited pain-point for people new to Rust (like me).</p>
+    <p>Having worked with it a little bit now, I would say that this biggest challenge is understanding the type that is returned by an async function, given that they seem to often be wrapped in a couple of layers of types.</p>
+    <h4>Serving static content</h4>
+    <p>A point somewhat related to the above, I wanted a way to write posts like this, but without having to surround items with HTML tags, or their Dioxus equivalents.</p>
+    <p>I confess to originally not drinking the Rust Kool-aid and using Markdown at first, but I realised that this would be a great opportunity to use Typst for the first time.</p>
+    <p>Then it became a matter of automating the export of my Typst documents to HTML when building, and serving these rendered pages.</p>
+    <p>Typst HTML export is not quite yet fully functional, in particular it can't render maths just quite yet.</p>
+    <p>Whilst this isn't ideal, it also is not the end of the world, and I'm exploring ways to get around this until it is officially supported.</p>
+  </body>
+</html>
