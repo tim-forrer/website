@@ -15,11 +15,9 @@ pub fn Shell() -> Element {
             Link { to: Route::ProjectsTop, "Projects" }
             Link { to: Route::Gallery, "Gallery" }
         }
-
         Outlet::<Route> {}
-
         footer {
-            class: "flex gap-2 justify-center my-20",
+            class: "flex gap-2 justify-center my-20 pb-10",
             Link {
                 to: "https://www.linkedin.com/in/timothy-f-46158b107/",
                 Icon {

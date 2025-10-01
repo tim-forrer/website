@@ -1,0 +1,45 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  theme: {
+    extend: {
+      typography: () => ({
+        fox: {
+          css: {
+            '--tw-prose-body': 'var(--color-df-text)',
+            '--tw-prose-headings': 'var(--color-df-text)',
+            '--tw-prose-lead': 'var(--color-df-text)',
+            '--tw-prose-links': 'var(--color-df-text)',
+            '--tw-prose-bold': 'var(--color-df-text)',
+            '--tw-prose-counters': 'var(--color-df-text)',
+            '--tw-prose-bullets': 'var(--color-df-text)',
+            '--tw-prose-hr': 'var(--color-df-text)',
+            '--tw-prose-quotes': 'var(--color-df-text)',
+            '--tw-prose-quote-borders': 'var(--color-df-select)',
+            '--tw-prose-captions': 'var(--color-df-text)',
+            '--tw-prose-code': 'var(--color-df-text)',
+            '--tw-prose-pre-code': 'var(--color-df-text)',
+            '--tw-prose-pre-bg': 'var(--color-df-text)',
+            '--tw-prose-th-borders': 'var(--color-df-text)',
+            '--tw-prose-td-borders': 'var(--color-df-text)',
+            '--tw-prose-invert-body': 'var(--color-nf-text)',
+            '--tw-prose-invert-headings': 'var(--color-nf-text)',
+            '--tw-prose-invert-lead': 'var(--color-nf-text)',
+            '--tw-prose-invert-links': 'var(--color-nf-text)',
+            '--tw-prose-invert-bold': 'var(--color-nf-text)',
+            '--tw-prose-invert-counters': 'var(--color-nf-text)',
+            '--tw-prose-invert-bullets': 'var(--color-nf-text)',
+            '--tw-prose-invert-hr': 'var(--color-nf-text)',
+            '--tw-prose-invert-quotes': 'var(--color-nf-text)',
+            '--tw-prose-invert-quote-borders': 'var(--color-nf-text)',
+            '--tw-prose-invert-captions': 'var(--color-nf-text)',
+            '--tw-prose-invert-code': 'var(--color-nf-text)',
+            '--tw-prose-invert-pre-code': 'var(--color-nf-text)',
+            '--tw-prose-invert-pre-bg': 'rgb(0 0 0 / 50%)',
+            '--tw-prose-invert-th-borders': 'var(--color-nf-text)',
+            '--tw-prose-invert-td-borders': 'var(--color-nf-text)',
+          },
+        },
+      }),
+    },
+  },
+}

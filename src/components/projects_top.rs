@@ -1,20 +1,23 @@
 use crate::Route;
+use std::collections::HashMap;
 use dioxus::prelude::*;
 
 #[component]
 pub fn ProjectsTop() -> Element {
-    let pages_list = vec!["typst"];
+    let mut pages_map = HashMap::new();
+    pages_map.insert("Building a Website in Rust".to_string(), "typst".to_string());
+
     rsx!(
-        ul { class: "list-disc pl-5",
-            for page in pages_list {
+        ul {
+            for (title, page_name) in &pages_map {
                 {
                     rsx! {
                         li {
                             Link {
                                 to: Route::Project {
-                                    title: page.to_string(),
+                                    title: page_name.to_string(),
                                 },
-                                "{page}"
+                                "{title}"
                             }
                         }
                     }

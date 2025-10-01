@@ -15,8 +15,8 @@ source = { url = "https://github.com/spinframework/spin-fileserver/releases/down
 files = [ { source = "./target/dx/website/release/web/public", destination = "/" } ]
 [component.website.build]
 command = """
-npx @tailwindcss/cli -i ./tailwind.css -o ./assets/tailwind.css \
-&& bash ./build/typst.sh ./projects/ ./assets/projects/ \
+npx @tailwindcss/cli -i ./build/tailwind.css -o ./assets/tailwind.css \
+&& bash ./build/typst.sh ./projects ./assets/projects \
 && dx bundle --platform web
 """
 watch = ["src/**/*.rs", "Cargo.toml", "./tailwind.css"]

@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+@config "./tailwind.config.js";
 @source "./src/**/*.{rs,html,css}";
 
 @theme {
@@ -9,13 +10,6 @@
   --color-nf-text: #cdcecf;
   --color-nf-bg: #2e3440;
   --color-nf-select: #3e4a5b;
-}
-
-@layer base {
-  h1 {
-    @apply text-3xl;
-    @apply m-2;
-  }
 }
 
 #typst-html blockquote + p {

@@ -20,12 +20,10 @@ pub fn Project(title: String) -> Element {
     rsx!(
         div {
             id: "typst-html",
-            class: "prose max-w-none",
             dangerous_inner_html: html,
         }
         div {
-            class: "mt-15",
-            Link { to: Route::ProjectsTop, "Back to projects" }
+            Link { to: Route::ProjectsTop, "Back to projects ↩" }
         }
     )
 }
