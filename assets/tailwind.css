@@ -593,9 +593,6 @@
       margin-bottom: 0;
     }
   }
-  .mt-15 {
-    margin-top: calc(var(--spacing) * 15);
-  }
   .block {
     display: block;
   }
@@ -611,6 +608,9 @@
   }
   .h-screen {
     height: 100vh;
+  }
+  .max-h-1\/2 {
+    max-height: calc(1/2 * 100%);
   }
   .max-w-7\/8 {
     max-width: calc(7/8 * 100%);
